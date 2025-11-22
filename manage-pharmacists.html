@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manage Pharmacists</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="sidebar">
+  <h3>Manager Panel</h3>
+  <a href="manager-dashboard.html">Dashboard</a>
+  <a href="control-items.html">Control Items</a>
+  <a href="manage-pharmacists.html" class="active">Manage Pharmacists</a>
+  <a href="manager-daily-report.html">Generate Reports</a>
+  <a href="login.html">Log Out</a>
+</div>
+
+<div class="main-content">
+<h2 class="dashboard-title">Manage Pharmacists</h2>
+<div class="card form-card">
+  <div class="form-row">
+    <label>Name</label>
+    <input type="text" placeholder="Full Name">
+  </div>
+  <div class="form-row">
+    <label>ID</label>
+    <input type="text" placeholder="Pharmacist ID">
+  </div>
+  <div class="form-row">
+    <label>Phone</label>
+    <input type="text" placeholder="Phone">
+  </div>
+  <div class="form-row">
+    <label>Username</label>
+    <input type="text" placeholder="Username">
+  </div>
+  <div class="form-row">
+    <label>Password</label>
+    <input type="password" placeholder="Password">
+  </div>
+  <button class="primary">Add Pharmacist</button>
+</div>
+
+<div class="card">
+  <h3>Pharmacists List</h3>
+  <table class="simple-table">
+    <thead><tr><th>Name</th><th>ID</th><th>Phone</th><th>Username</th><th>Password</th><th>Actions</th></tr></thead>
+    <tbody>
+      <tr><td>mahmoud</td><td>101</td><td>0100000000</td><td>Pharmacist</td><td>123</td><td><button class="small primary">Edit</button> <button class="small danger">Delete</button></td></tr> 
+    </tbody>
+  </table>
+</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

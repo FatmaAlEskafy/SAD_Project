@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sell Items</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="sidebar">
+  <h3>Pharmacist Panel</h3>
+    <a href="pharmacist-dashboard.html">Dashboard</a>
+    <a href="check-items.html">Check Items</a>
+    <a href="sell.html"class="active">Sell Items</a>
+    <a href="customer.html">Enter Customer Info</a>
+    <a href="pharmacist-daily-report.html">Generate Report</a>
+    <a href="login.html">Log Out</a>
+</div>
+
+<div class="main-content">
+<h2 class="dashboard-title">Sell Items</h2>
+
+<div class="card form-card">
+  <div class="form-row">
+    <label>Item Name</label>
+    <input type="text" placeholder="Enter item">
+  </div>
+  <div class="form-row">
+    <label>Quantity</label>
+    <input type="number" min="1" value="1">
+  </div>
+  <div class="form-row">
+    <label>Unit Price</label>
+    <input type="number" min="0" value="0">
+  </div>
+  <button class="primary">Add to Cart</button>
+</div>
+
+<div class="card">
+  <h3>Invoice Preview</h3>
+  <table class="simple-table">
+    <thead>
+      <tr><th>Item</th><th>Unit</th><th>Qty</th><th>Price</th><th>Total</th><th>Payment<br>Method</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+    </tbody>
+  </table>
+  <button class="primary">Print Invoice</button>
+</div>
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>

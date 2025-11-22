@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Control Items - Manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="sidebar">
+    <h3>Manager Panel</h3>
+    <a href="manager-dashboard.html">Dashboard</a>
+    <a href="control-items.html" class="active">Control Items</a>
+    <a href="manage-pharmacists.html">Manage Pharmacists</a>
+    <a href="manager-daily-report.html">Generate Reports</a>
+    <a href="login.html">Log Out</a>
+  </div>
+
+  <div class="main-content">
+    <h2 class="dashboard-title">Control Items</h2>
+
+    <!-- Add Item Form -->
+    <div class="card form-card">
+      <h3>Add / Edit Item</h3>
+      <div class="form-row">
+        <label>Item Name</label>
+        <input type="text" placeholder="Enter item name">
+      </div>
+      <div class="form-row">
+        <label>Unit</label>
+        <input type="text" placeholder="Box / Bottle">
+      </div>
+      <div class="form-row">
+        <label>Quantity</label>
+        <input type="number" min="0" placeholder="Enter quantity">
+      </div>
+      <div class="form-row">
+        <label>NO. of Strips / Unit</label>
+        <input type="number" min="0" placeholder="Enter number">
+      </div>
+      <div class="form-row">
+        <label>NO. of Tablets / Strip</label>
+        <input type="number" min="0" placeholder="Enter number">
+      </div>
+      <div class="form-row">
+        <label>Unit Price</label>
+        <input type="number" min="0" placeholder="Enter Unit price">
+      </div>
+      <div class="form-row">
+        <label>Strip Price</label>
+        <input type="number" min="0" placeholder="Enter Strip price">
+      </div>
+      <div class="form-row">
+          <label for="presDate">Expire Date</label>
+          <input type="date" id="presDate" required>
+        </div>
+      <div class="form-row">
+        <label>Company Name</label>
+        <input type="text" placeholder="Enter item name">
+      </div>
+      
+      <div class="form-actions">
+        <button class="primary">Add Item</button>
+        <button class="secondary">Reset</button>
+      </div>
+    </div>
+
+    <!-- Items Table -->
+    <div class="card">
+      <h3>Items List</h3>
+      <input type="text" placeholder="Search item..." class="search-input"><br><br>
+      <table class="simple-table">
+        <thead>
+          <tr>
+            <th>Item Name</th>
+            <th>Unit</th>
+            <th>Quantity</th>
+            <th>NO. of Strips <br>/ Unit</th>
+            <th>NO. of tablet <br>/ Strip</th>
+            <th>Unit <br>Price</th>
+            <th>Strip <br>Price</th>
+            <th>Expire Date</th>
+            <th>Company <br>Name</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Paracetamol</td>
+            <td>Box</td>
+            <td>50</td>
+            <td>3</td>
+            <td>10</td>
+            <td>90 EGP</td>
+            <td>30 EGP</td>
+            <td>12/30/2027</td>
+            <td>AdvaCare Pharma</td>
+            <td>
+              <button class="small primary">Edit</button>
+              <button class="small danger">Delete</button>
+            </td>
+          </tr>
+          <tr>
+            <td>Aspirin</td>
+            <td>Box</td>
+            <td>30</td>
+            <td>4</td>
+            <td>10</td>
+            <td>40 EGP</td>
+            <td>10 EGP</td>
+            <td>01/24/2028</td>
+            <td>Bayer Pharma</td>
+            <td>
+              <button class="small primary">Edit</button>
+              <button class="small danger">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+</body>
+</html>
+

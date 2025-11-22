@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Enter Customer Info - Pharmacy</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="sidebar">
+    <h3>Pharmacist Panel</h3>
+    <a href="pharmacist-dashboard.html">Dashboard</a>
+    <a href="check-items.html">Check Items</a>
+    <a href="sell.html">Sell Items</a>
+    <a href="customer.html"class="active">Enter Customer Info</a>
+    <a href="pharmacist-daily-report.html">Generate Report</a>
+    <a href="login.html">Log Out</a>
+    
+  </div>
+
+  <div class="main-content">
+    <h2 class="dashboard-title"><b>Enter Customer Info </b><br><br>(Controlled Medicines)</h2><br><br>
+    
+
+    <div class="card form-card">
+      <form id="customerForm" onsubmit="event.preventDefault(); saveCustomer();">
+        <div class="form-row">
+          <label for="custId">Customer ID</label>
+          <input type="text" id="custId" placeholder="ID (e.g. national ID)" required>
+        </div>
+
+        <div class="form-row">
+          <label for="custName">Name</label>
+          <input type="text" id="custName" placeholder="Customer full name" required>
+        </div>
+
+        <div class="form-row">
+          <label for="custPhone">Phone</label>
+          <input type="tel" id="custPhone" placeholder="010xxxxxxxx" pattern="[0-9]{8,15}" required>
+        </div>
+
+        <div class="form-row">
+          <label for="doctorName">Doctor Name</label>
+          <input type="text" id="doctorName" placeholder="Prescribing doctor" required>
+        </div>
+
+        <div class="form-row">
+          <label for="presDate">Date</label>
+          <input type="date" id="presDate" required>
+        </div>
+
+        <div class="form-row">
+          <label for="prescription">Prescription Image</label>
+          <input type="file" id="prescription" accept="image/*">
+          <div id="imgPreview" class="img-preview" style="display:none;">
+            <img id="previewImg" src="" alt="Prescription preview">
+            <button type="button" class="small danger" onclick="clearImage()">Remove</button>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <label for="notes">Notes (optional)</label>
+          <textarea id="notes" rows="2" placeholder="e.g. controlled drug name / special instruction"></textarea>
+        </div>
+
+        <div style="display:flex; gap:10px;">
+          <button type="submit" class="primary">Save Record</button>
+          <button type="button" class="secondary">Reset</button>
+        </div>
+      </form>
+    </div>
+
+
+
+<script src="script.js"></script>
+</body>
+</html>
